@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .grid-container {
+            height: 100vh;
+            display: grid;
+            grid-template-rows: 200px 1fr 1fr;
+            grid-template-columns: repeat(3, 1fr);
+            background-color: red;
+
+            grid-template-areas:
+                "navbar navbar navbar"
+                "hero hero aside"
+                "tags post post"
+            ;
+
+            gap: 20px;
+        }
+
+        .navbar {
+            background-color: aqua;
+            grid-area: navbar
+        }
+
+        .hero {
+            background-color: blue;
+            grid-area: hero;
+        }
+
+        .aside {
+            background-color: purple;
+            grid-area: aside;
+        }
+
+        .tags {
+            background-color: green;
+            grid-area: tags;
+        }
+
+        .post {
+            background-color: yellow;
+            grid-area: post;
+        }
+
+        .grid-container>div {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: #ffffff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="grid-container">
+        <div class="aside"> Aside</div>
+        <div class="navbar"> Navbarx</div>
+        <div class="hero"> Hero</div>
+        <div class="post"> Post</div>
+        <div class="tags"> Tags</div>
+
+    </div>
+</body>
+
+</html>
